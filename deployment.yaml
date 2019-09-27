@@ -14,7 +14,7 @@ spec:
         app: jenkins-java-demo
     spec:
       imagePullSecrets:
-      - name: jenkins-docker-cfg
+      - name: ds-team-docker-registery-pw
       containers:
       - name: jenkins-java-demo
         image: ${ORIGIN_REPO}/${REPO}:${IMAGE_TAG}
