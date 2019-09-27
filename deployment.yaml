@@ -13,6 +13,8 @@ spec:
       labels:
         app: jenkins-java-demo
     spec:
+      imagePullSecrets:
+      - name: jenkins-docker-cfg
       containers:
       - name: jenkins-java-demo
         image: ${ORIGIN_REPO}/${REPO}:${IMAGE_TAG}
