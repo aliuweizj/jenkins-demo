@@ -1,7 +1,9 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
+namespace: ds-team-uat
 metadata:
   name: jenkins-java-demo
+  namespace: ds-team-uat
 spec:
   replicas: 1
   selector:
@@ -22,8 +24,10 @@ spec:
 ---
 apiVersion: v1
 kind: Service
+namespace: ds-team-uat
 metadata:
   name: jenkins-java-demo
+  namespace: ds-team-uat
 spec:
   ports:
   - port: 80
